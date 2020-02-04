@@ -1,6 +1,6 @@
-# Iframe version
+## Iframe version
 
-Note: this is a vertion of the microfrontend container repo (https://github.com/micro-frontends-demo/container) just implemented with iframe. You'll still need content, browse and restaurant-order repos from https://github.com/micro-frontends-demo/ for this to work.
+Note: this is a version of the microfrontend container repo (https://github.com/micro-frontends-demo/container) just implemented with iframe. You'll still need content, browse and restaurant-order repos from https://github.com/micro-frontends-demo/ for this to work.
 
 The experience is largely similar, except that clicking into pages triggers a full page reload each time. And the header is now fixed when scrolling (except for about page)
 
