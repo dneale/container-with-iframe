@@ -26,16 +26,24 @@ class MicroFrontend extends React.Component {
     const { name, window } = this.props;
 
     window[`unmount${name}`](`${name}-container`);
+    document.documentElement.style['overflow-y'] = 'initial';
+
   }
 
   renderMicroFrontend = () => {
     const { name, window, history } = this.props;
-
     window[`render${name}`](`${name}-container`, history);
+
+    document.documentElement.style['overflow-y'] = 'hidden';
   };
 
   render() {
-    return <main id={`${this.props.name}-container`} />;
+    return (
+      <iframe 
+        src={`${this.props.host}${this.props.window.location.pathname}`}
+        id={`${this.props.name}-container`}>
+      </iframe>
+    )
   }
 }
 
